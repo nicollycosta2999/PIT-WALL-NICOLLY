@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PITWALL - Guia do Grande Prêmio de São Paulo em Interlagos.">
+    <title>PITWALL | GP de São Paulo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="top-stripe"></div>
+    <header class="site-header">
+        <a class="brand" href="#inicio"><span class="brand-mark">PIT</span><span>WALL</span><i>®</i></a>
+        <nav class="main-nav" aria-label="Navegação principal">
+            <a href="#pilotos">Pilotos</a>
+            <a href="#classificacao">Classificação</a>
+            <a href="#ingressos">Ingressos</a>
+        </nav>
+        <a class="header-button" href="#ingressos">COMPRAR INGRESSOS</a>
+    </header>
+
+
+    <main class="page-shell" id="inicio">
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">AUTÓDROMO DE INTERLAGOS · SÃO PAULO · BRASIL</p>
+                <h1>GP DE<br><span>SÃO PAULO</span></h1>
+                <p class="hero-description">Velocidade, emoção e ultrapassagens no templo brasileiro do automobilismo.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-red" href="#ingressos">GARANTA SEU INGRESSO</a>
+                    <a class="button button-outline" href="#classificacao">VER CLASSIFICAÇÃO</a>
+                </div>
+            </div>
+            <div class="hero-photo">
+                <img src="img/piloto.jpg" alt="Carro de corrida durante uma prova em Interlagos">
+                <div class="photo-shade"></div>
+                <div class="hero-stats">
+                    <div><strong>71</strong><span>VOLTAS</span></div>
+                    <div><strong>4.309</strong><span>KM</span></div>
+                    <div><strong>15</strong><span>CURVAS</span></div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="checkered-line" aria-hidden="true"></div>
+
+
+        <section class="section" id="pilotos">
+            <div class="section-heading">
+                <p class="eyebrow">OS PROTAGONISTAS</p>
+                <h2>GRID DE PILOTOS</h2>
+            </div>
+            <div class="team-filters" aria-label="Equipes em destaque">
+                <span class="filter-chip active">TODAS</span>
+                <span class="filter-chip">MCLAREN</span>
+                <span class="filter-chip">FERRARI</span>
+                <span class="filter-chip">MERCEDES</span>
+                <span class="filter-chip">RED BULL</span>
+            </div>
+            <div class="drivers-grid">
+                <article class="driver-card team-mclaren">
+                    <span class="driver-number">16</span>
+                    <div>
+                        <h3>CHARLES LECLERC</h3>
+                        <p>FERRARI</p>
+                    </div><span class="team-dot"></span>
+                </article>
+                <article class="driver-card team-redbull">
+                    <span class="driver-number">1</span>
+                    <div>
+                        <h3>MAX VERSTAPPEN</h3>
+                        <p>RED BULL RACING</p>
+                    </div><span class="team-dot"></span>
+                </article>
+                <article class="driver-card team-mercedes">
+                    <span class="driver-number">63</span>
+                    <div>
+                        <h3>GEORGE RUSSELL</h3>
+                        <p>MERCEDES</p>
+                    </div><span class="team-dot"></span>
+                </article>
+                <article class="driver-card team-haas">
+                    <span class="driver-number">27</span>
+                    <div>
+                        <h3>NICO HÜLKENBERG</h3>
+                        <p>HAAS</p>
+                    </div><span class="team-dot"></span>
+                </article>
+            </div>
+        </section>
+
+
+        <section class="section" id="classificacao">
+            <div class="section-heading">
+                <p class="eyebrow">RESULTADOS DA TEMPORADA</p>
+                <h2>CLASSIFICAÇÃO</h2>
+            </div>
+            <div class="table-toolbar">
+                <label for="season">Temporada</label>
+                <select id="season">
+                    <option>2026</option>
+                    <option>2025</option>
+                    <option>2024</option>
+                </select>
+                <button class="button button-outline filter-button" type="button">FILTRAR</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>POS.</th>
+                            <th>PILOTO</th>
+                            <th>EQUIPE</th>
+                            <th>VITÓRIAS</th>
+                            <th>PONTOS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="position first">1</span></td>
+                            <td>Max Verstappen</td>
+                            <td>Red Bull</td>
+                            <td>5</td>
+                            <td class="points">110</td>
+                        </tr>
+                        <tr>
+                            <td><span class="position">2</span></td>
+                            <td>Charles Leclerc</td>
+                            <td>Ferrari</td>
+                            <td>3</td>
+                            <td class="points">98</td>
+                        </tr>
+                        <tr>
+                            <td><span class="position">3</span></td>
+                            <td>George Russell</td>
+                            <td>Mercedes</td>
+                            <td>2</td>
+                            <td class="points">85</td>
+                        </tr>
+                        <tr>
+                            <td><span class="position">4</span></td>
+                            <td>Lando Norris</td>
+                            <td>McLaren</td>
+                            <td>1</td>
+                            <td class="points">79</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="table-note">* Classificação ilustrativa para fins de estudo de HTML e CSS.</p>
+        </section>
+
+
+        <section class="section tickets-section" id="ingressos">
+            <div class="ticket-info">
+                <p class="eyebrow">VIVA A EXPERIÊNCIA</p>
+                <h2>INGRESSOS</h2>
+                <p class="section-intro">Escolha seu setor e prepare-se para sentir a emoção da velocidade de perto.</p>
+                <ul class="ticket-list">
+                    <li><span>Arquibancada</span><strong>R$ 890,00</strong></li>
+                    <li><span>Setor A</span><strong>R$ 650,00</strong></li>
+                    <li><span>Setor M</span><strong>R$ 1.200,00</strong></li>
+                    <li><span>VIP</span><strong>R$ 2.500,00</strong></li>
+                </ul>
+            </div>
+            <form class="ticket-form" action="#" method="get">
+                <div class="form-heading"><span class="form-icon">✦</span>
+                    <div>
+                        <h3>RESERVE SEU LUGAR</h3>
+                        <p>Preencha os dados para demonstrar seu interesse.</p>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-field full"><label for="nome">Nome completo</label><input id="nome" name="nome"
+                            type="text" placeholder="Digite seu nome" required></div>
+                    <div class="form-field"><label for="email">E-mail</label><input id="email" name="email" type="email"
+                            placeholder="seu@email.com" required></div>
+                    <div class="form-field"><label for="telefone">Telefone</label><input id="telefone" name="telefone"
+                            type="tel" placeholder="(11) 99999-9999"></div>
+                    <div class="form-field"><label for="setor">Setor</label><select id="setor" name="setor" required>
+                            <option value="">Selecione</option>
+                            <option>Arquibancada</option>
+                            <option>Setor A</option>
+                            <option>Setor M</option>
+                            <option>VIP</option>
+                        </select></div>
+                    <div class="form-field"><label for="data">Data</label><input id="data" name="data" type="date">
+                    </div>
+                    <div class="form-field full"><label for="mensagem">Observações</label><textarea id="mensagem"
+                            name="mensagem" rows="3" placeholder="Escreva uma observação (opcional)"></textarea></div>
+                </div>
+                <button class="button button-red submit-button" type="submit">RESERVAR INGRESSO</button>
+                <p class="form-disclaimer">Projeto demonstrativo. O formulário não realiza uma compra real.</p>
+            </form>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <a class="brand footer-brand" href="#inicio"><span class="brand-mark">PIT</span><span>WALL</span><i>®</i></a>
+        <p>PITWALL · Projeto de estudo de HTML e CSS · Feito por <strong>NICOLLY COSTA VICENTE</strong></p>
+        <a href="#inicio">VOLTAR AO TOPO ↑</a>
+    </footer>
+    <div class="bottom-stripe"></div>
+</body>
+
+</html>

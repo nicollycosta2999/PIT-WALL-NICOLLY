@@ -1,0 +1,697 @@
+/* PITWALL — Projeto de estudo de HTML e CSS */
+
+:root {
+    --bg: #08080b;
+    --panel: #111116;
+    --panel-light: #19191f;
+    --text: #f5f5f7;
+    --muted: #92929b;
+    --red: #ed101c;
+    --red-dark: #a80711;
+    --line: #292930;
+    --mclaren: #ff8700;
+    --ferrari: #e80020;
+    --mercedes: #00a99d;
+    --redbull: #3155a5;
+    --haas: #dedee3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+    min-width: 320px;
+}
+
+.top-stripe,
+.bottom-stripe {
+    height: 9px;
+    background: repeating-linear-gradient(90deg, #f4f4f4 0 18px, var(--red) 18px 36px);
+}
+
+.site-header {
+    width: min(1120px, 92%);
+    min-height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    color: var(--text);
+    text-decoration: none;
+    font: 900 25px "Barlow Condensed", sans-serif;
+    font-style: italic;
+    letter-spacing: -1px;
+}
+
+.brand-mark {
+    background: var(--red);
+    padding: 2px 5px;
+    margin-right: 2px;
+}
+
+.brand i {
+    color: var(--red);
+    font: 700 9px Inter, sans-serif;
+    vertical-align: top;
+}
+
+.main-nav {
+    display: flex;
+    gap: 28px;
+}
+
+.main-nav a,
+.site-footer>a:last-child {
+    color: #bdbdc4;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.main-nav a:hover,
+.site-footer a:hover {
+    color: var(--red);
+}
+
+.header-button,
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font: 800 10px Inter, sans-serif;
+    letter-spacing: .4px;
+    border: 0;
+    cursor: pointer;
+}
+
+.header-button {
+    background: var(--red);
+    color: white;
+    padding: 12px 17px;
+}
+
+.page-shell {
+    width: min(1120px, 92%);
+    margin: 0 auto 70px;
+    background: #0b0b0f;
+    border: 1px solid #24242b;
+    box-shadow: 0 12px 45px #0008;
+}
+
+.hero {
+    min-height: 355px;
+    padding: 42px 42px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    overflow: hidden;
+}
+
+.hero-copy {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    color: var(--red);
+    font: 800 10px "Barlow Condensed", sans-serif;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: .95;
+}
+
+h1 {
+    margin: 13px 0 14px;
+    font-size: clamp(54px, 8vw, 88px);
+    letter-spacing: -2px;
+}
+
+h1 span {
+    color: var(--red);
+}
+
+.hero-description,
+.section-intro {
+    max-width: 390px;
+    color: #aaaab3;
+    font-size: 12px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.button {
+    min-height: 38px;
+    padding: 0 17px;
+}
+
+.button-red {
+    color: white;
+    background: var(--red);
+}
+
+.button-red:hover,
+.header-button:hover {
+    background: #bd0711;
+}
+
+.button-outline {
+    color: white;
+    border: 1px solid #777780;
+    background: transparent;
+}
+
+.button-outline:hover {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+.hero-photo {
+    width: 43%;
+    min-height: 260px;
+    position: relative;
+    transform: skewX(-8deg);
+    border-left: 10px solid var(--red);
+    overflow: hidden;
+    background: #26262d;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    transform: skewX(8deg) scale(1.12);
+    filter: saturate(1.2) contrast(1.08);
+}
+
+.photo-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, #050508e8, transparent 70%);
+}
+
+.hero-stats {
+    position: absolute;
+    bottom: 17px;
+    left: 12px;
+    right: 10px;
+    display: flex;
+    justify-content: space-around;
+    transform: skewX(8deg);
+}
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-stats strong {
+    font: 900 24px "Barlow Condensed", sans-serif;
+}
+
+.hero-stats span {
+    color: #d0d0d5;
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.checkered-line {
+    height: 9px;
+    background: repeating-linear-gradient(90deg, #eee 0 17px, #17171b 17px 34px, var(--red) 34px 51px, #17171b 51px 68px);
+}
+
+.section {
+    padding: 35px 42px 5px;
+}
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+.section-heading h2,
+.ticket-info h2 {
+    font-size: 31px;
+    margin-top: 5px;
+}
+
+.team-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.filter-chip {
+    color: #aaaab2;
+    border: 1px solid #33333a;
+    padding: 6px 11px;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.filter-chip.active {
+    color: white;
+    background: var(--red);
+    border-color: var(--red);
+}
+
+.drivers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 12px;
+}
+
+.driver-card {
+    min-height: 92px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px;
+    background: var(--panel);
+    border: 1px solid #303038;
+    border-top: 3px solid var(--team);
+    position: relative;
+}
+
+.team-mclaren {
+    --team: var(--mclaren);
+}
+
+.team-redbull {
+    --team: var(--redbull);
+}
+
+.team-mercedes {
+    --team: var(--mercedes);
+}
+
+.team-haas {
+    --team: var(--haas);
+}
+
+.driver-number {
+    color: var(--team);
+    font: 900 34px "Barlow Condensed", sans-serif;
+}
+
+.driver-card h3 {
+    font-size: 15px;
+}
+
+.driver-card p {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.team-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--team);
+    margin-left: auto;
+}
+
+.table-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.table-toolbar label {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+select,
+input,
+textarea {
+    width: 100%;
+    background: #0b0b10;
+    border: 1px solid #33333c;
+    color: var(--text);
+    padding: 11px 12px;
+    font: 11px Inter, sans-serif;
+    outline: none;
+}
+
+.table-toolbar select {
+    width: 145px;
+    padding: 8px 10px;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+    border-color: var(--red);
+}
+
+.filter-button {
+    min-height: 32px;
+    margin-left: auto;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    border: 1px solid #292930;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+    text-align: left;
+}
+
+thead {
+    background: #18181e;
+}
+
+th {
+    color: #aaaab2;
+    font-size: 8px;
+    letter-spacing: .7px;
+    padding: 12px 13px;
+}
+
+td {
+    padding: 11px 13px;
+    border-top: 1px solid #27272e;
+    font-size: 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background: #111116;
+}
+
+tbody tr:first-child {
+    background: #291014;
+}
+
+.position {
+    display: inline-grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    background: #33333b;
+    font-weight: 800;
+}
+
+.position.first {
+    background: var(--red);
+}
+
+.points {
+    color: var(--red);
+    font-weight: 800;
+}
+
+.table-note,
+.form-disclaimer {
+    margin-top: 9px;
+    color: #777780;
+    font-size: 9px;
+}
+
+.tickets-section {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 35px;
+    padding-bottom: 42px;
+    margin-top: 28px;
+}
+
+.ticket-info h2 {
+    margin-bottom: 12px;
+}
+
+.ticket-list {
+    list-style: none;
+    margin-top: 22px;
+}
+
+.ticket-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #2b2b32;
+    font-size: 11px;
+}
+
+.ticket-list strong {
+    color: var(--red);
+}
+
+.ticket-form {
+    padding: 20px;
+    background: var(--panel);
+    border: 1px solid #303038;
+    border-top: 3px solid var(--red);
+}
+
+.form-heading {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.form-icon {
+    color: var(--red);
+    font-size: 23px;
+}
+
+.form-heading h3 {
+    font-size: 20px;
+}
+
+.form-heading p {
+    color: var(--muted);
+    font-size: 9px;
+    margin-top: 5px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.form-field {
+    min-width: 0;
+}
+
+.form-field.full {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    display: block;
+    color: #c6c6cd;
+    font-size: 9px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    font-size: 10px;
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.site-footer {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.footer-brand {
+    font-size: 18px;
+}
+
+.site-footer p {
+    color: #898992;
+    font-size: 9px;
+    text-align: center;
+}
+
+.site-footer p strong {
+    color: #eee;
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        min-height: 62px;
+        flex-wrap: wrap;
+        padding: 12px 0;
+        gap: 12px;
+    }
+
+    .brand {
+        font-size: 22px;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 25px;
+        padding-top: 8px;
+    }
+
+    .main-nav a {
+        font-size: 9px;
+    }
+
+    .header-button {
+        padding: 10px 11px;
+        font-size: 8px;
+    }
+
+    .page-shell {
+        width: 94%;
+        margin-bottom: 35px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 30px 22px 24px;
+        display: block;
+    }
+
+    h1 {
+        font-size: clamp(53px, 15vw, 76px);
+    }
+
+    .hero-photo {
+        width: 100%;
+        min-height: 190px;
+        margin-top: 25px;
+    }
+
+    .hero-photo img {
+        min-height: 190px;
+    }
+
+    .section {
+        padding: 28px 22px 4px;
+    }
+
+    .section-heading h2,
+    .ticket-info h2 {
+        font-size: 28px;
+    }
+
+    .drivers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+        gap: 9px;
+    }
+
+    .driver-card {
+        min-height: 82px;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .driver-number {
+        font-size: 29px;
+    }
+
+    .driver-card h3 {
+        font-size: 13px;
+    }
+
+    .tickets-section {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding-bottom: 28px;
+        margin-top: 22px;
+    }
+
+    .ticket-list {
+        margin-top: 12px;
+    }
+
+    .ticket-form {
+        padding: 15px;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 390px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-field.full {
+        grid-column: auto;
+    }
+
+    .hero-actions .button {
+        width: 100%;
+    }
+
+    .table-toolbar {
+        flex-wrap: wrap;
+    }
+}
